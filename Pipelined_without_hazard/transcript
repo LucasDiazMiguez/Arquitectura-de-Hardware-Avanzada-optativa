@@ -1,0 +1,1411 @@
+# Reading C:/questasim64_10.7c/tcl/vsim/pref.tcl
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 09:45:34 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 09:45:34 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 09:45:34 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlftm1ay70".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftm1ay70
+# ** Note: $stop    : testbench.sv(35)
+#    Time: 3005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 35
+do run.do
+# 1
+# ** Warning: (vlib-34) Library already exists at "work".
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 10:13:31 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 10:13:31 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:13:32 on Sep 25,2024, Elapsed time: 0:27:58
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 10:13:32 on Sep 25,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlft58dk7y".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft58dk7y
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "riscvtest.txt". (Current address [64], address range [0:63])    : imem.sv(5)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/imem
+# [LDM Debug] Tiempo:                  605 llegué
+# Simulation failed
+# ** Note: $stop    : testbench.sv(28)
+#    Time: 605 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 28
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 10:14:13 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 10:14:13 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:14:16 on Sep 25,2024, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 10:14:16 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlftdvkxra".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdvkxra
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "riscvtest.txt". (Current address [64], address range [0:63])    : imem.sv(5)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/imem
+# [LDM Debug] Tiempo:                  605 llegué
+# Simulation failed
+# ** Note: $stop    : testbench.sv(36)
+#    Time: 605 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 36
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 10:15:12 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 10:15:12 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:15:13 on Sep 25,2024, Elapsed time: 0:00:57
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 10:15:13 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlft9ar3m4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9ar3m4
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "riscvtest.txt". (Current address [64], address range [0:63])    : imem.sv(5)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/imem
+# [LDM Debug] Tiempo:                  605 llegué
+# Simulation failed
+# ** Note: $stop    : testbench.sv(36)
+#    Time: 605 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 36
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 10:15:30 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 10:15:30 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:15:31 on Sep 25,2024, Elapsed time: 0:00:18
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 10:15:31 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlft43k4tn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft43k4tn
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "riscvtest.txt". (Current address [64], address range [0:63])    : imem.sv(5)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/imem
+# [LDM Debug] Tiempo:                  605 llegué
+# Simulation failed
+# ** Note: $stop    : testbench.sv(36)
+#    Time: 605 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 36
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 10:16:15 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 10:16:15 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:16:18 on Sep 25,2024, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 10:16:18 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlft5d09yd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5d09yd
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "riscvtest.txt". (Current address [64], address range [0:63])    : imem.sv(5)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/imem
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+add wave -position 14  sim:/testbench/dut/dmem/RAM
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/HP/Desktop/AHA/Pipelined_without_hazard/wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/HP/Desktop/AHA/Pipelined_without_hazard/wave.do
+add wave -position 14  sim:/testbench/dut/dmem/RAM
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 10:18:35 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 10:18:35 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:18:36 on Sep 25,2024, Elapsed time: 0:02:18
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 10:18:36 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlfte6h21a".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte6h21a
+# ** Warning: (vsim-PLI-3407) Too many data words read on line 65 of file "riscvtest.txt". (Current address [64], address range [0:63])    : imem.sv(5)
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut/imem
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 10:23:24 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 10:23:24 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:23:25 on Sep 25,2024, Elapsed time: 0:04:49
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 10:23:25 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlftbb0rdh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbb0rdh
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 10:30:56 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 10:30:57 on Sep 25,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 10:30:58 on Sep 25,2024, Elapsed time: 0:07:33
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 10:30:58 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlftkwggzx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkwggzx
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+add wave -position 95 sim:/testbench/#ALWAYS#40
+# (vish-4014) No objects found matching '/testbench/#ALWAYS#40'.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/HP/Desktop/AHA/Pipelined_without_hazard/wave.do
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 10:36:54 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 10:36:54 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:36:55 on Sep 25,2024, Elapsed time: 0:05:57
+# Errors: 1, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 10:36:55 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlfteqachb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfteqachb
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 10:37:37 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 10:37:37 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 10:37:38 on Sep 25,2024, Elapsed time: 0:00:43
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 10:37:38 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlfts3v0xh".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfts3v0xh
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 11:03:32 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 11:03:32 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 11:03:33 on Sep 25,2024, Elapsed time: 0:25:55
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 11:03:33 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlft91mhy4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft91mhy4
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 11:04:33 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 11:04:34 on Sep 25,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 11:04:35 on Sep 25,2024, Elapsed time: 0:01:02
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 11:04:35 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlftkcdzwk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkcdzwk
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+run -step
+add wave -position 75  -format Default -height 16 -label #ALWAYS#40 -max 0 -min 0
+# Missing signal name or pattern.
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:08:34 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 12:08:34 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:08:37 on Sep 25,2024, Elapsed time: 1:04:02
+# Errors: 1, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 12:08:37 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlftnnvqag".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnnvqag
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:10:28 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 12:10:28 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:10:31 on Sep 25,2024, Elapsed time: 0:01:54
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 12:10:31 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlft0t4baa".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0t4baa
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:20:49 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 12:20:49 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:20:51 on Sep 25,2024, Elapsed time: 0:10:20
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 12:20:51 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlfta2ysx5".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfta2ysx5
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:22:48 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 12:22:49 on Sep 25,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 12:22:52 on Sep 25,2024, Elapsed time: 0:02:01
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 12:22:52 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlftnkwhx4".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnkwhx4
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42
+do run.do
+# 0
+# 1
+# QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+# Start time: 12:45:23 on Sep 25,2024
+# vlog -reportprogress 300 -sv adder.sv mux2.sv mux3.sv controller.sv datapath.sv dmem.sv extend.sv flopenr.sv flopr.sv imem.sv maindec.sv riscv_pipelined_cycle.sv top.sv testbench.sv aludec.sv regfile.sv alu.sv history_flop.sv decode_phase.sv execute_phase.sv memory_phase.sv write_back_phase.sv mem_phase_Controller.sv execute_phase_Controller.sv write_phase_Controller.sv 
+# -- Compiling module adder
+# -- Compiling module mux2
+# -- Compiling module mux3
+# -- Compiling module controller
+# -- Compiling module datapath
+# -- Compiling module dmem
+# -- Compiling module extend
+# -- Compiling module flopenr
+# -- Compiling module flopr
+# -- Compiling module imem
+# -- Compiling module maindec
+# -- Compiling module riscv_pipelined_cycle
+# -- Compiling module top
+# -- Compiling module testbench
+# -- Compiling module aludec
+# -- Compiling module regfile
+# -- Compiling module alu
+# -- Compiling module signal_history
+# -- Compiling module decode_phase
+# -- Compiling module execute_phase
+# -- Compiling module memory_phase
+# -- Compiling module write_back_phase
+# -- Compiling module mem_phase_Controller
+# -- Compiling module execute_phase_Controller
+# -- Compiling module write_phase_Controller
+# 
+# Top level modules:
+# 	flopenr
+# 	testbench
+# 	signal_history
+# End time: 12:45:23 on Sep 25,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:45:27 on Sep 25,2024, Elapsed time: 0:22:35
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" -t 1ps work.testbench 
+# Start time: 12:45:27 on Sep 25,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "controller(fast)".
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.top(fast)
+# Loading work.riscv_pipelined_cycle(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.execute_phase_Controller(fast)
+# Loading work.mem_phase_Controller(fast)
+# Loading work.write_phase_Controller(fast)
+# Loading work.aludec(fast)
+# Loading work.datapath(fast)
+# Loading work.flopr(fast)
+# Loading work.adder(fast)
+# Loading work.mux2(fast)
+# Loading work.decode_phase(fast)
+# Loading work.regfile(fast)
+# Loading work.extend(fast)
+# Loading work.execute_phase(fast)
+# Loading work.alu(fast)
+# Loading work.memory_phase(fast)
+# Loading work.write_back_phase(fast)
+# Loading work.mux3(fast)
+# Loading work.imem(fast)
+# Loading work.dmem(fast)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: lucas  Hostname: LUCAS-ROGSTRIXG  ProcessID: 9652
+#           Attempting to use alternate WLF file "./wlft7anx3b".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7anx3b
+# ** Note: $stop    : testbench.sv(42)
+#    Time: 10005 ps  Iteration: 1  Instance: /testbench
+# Break in Module testbench at testbench.sv line 42

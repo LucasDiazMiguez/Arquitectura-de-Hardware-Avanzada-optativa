@@ -1,0 +1,99 @@
+00000013 // addi x0, x0, 0
+00100093 // addi x1, x0, 1
+00200113 // addi x2, x0, 2
+00300193 // addi x3, x0, 3
+00400213 // addi x4, x0, 4
+00500293 // addi x5, x0, 5
+00600313 // addi x6, x0, 6
+00700393 // addi x7, x0, 7
+00800413 // addi x8, x0, 8
+00900493 // addi x9, x0, 9
+00A00513 // addi x10, x0, 10
+00B00593 // addi x11, x0, 11
+00C00613 // addi x12, x0, 12
+00D00693 // addi x13, x0, 13
+00E00713 // addi x14, x0, 14
+00F00793 // addi x15, x0, 15
+01000813 // addi x16, x0, 16
+01100893 // addi x17, x0, 17
+01200913 // addi x18, x0, 18
+01300993 // addi x19, x0, 19
+01400A13 // addi x20, x0, 20
+01500A93 // addi x21, x0, 21
+01600B13 // addi x22, x0, 22
+01700B93 // addi x23, x0, 23
+01800C13 // addi x24, x0, 24
+01900C93 // addi x25, x0, 25
+01A00D13 // addi x26, x0, 26
+01B00D93 // addi x27, x0, 27
+01C00E13 // addi x28, x0, 28
+01D00E93 // addi x29, x0, 29
+01E00F13 // addi x30, x0, 30
+01F00F93 // addi x31, x0, 31
+0064A423//  sw x6, 8(x9)  . The register file reads 0x2004 (the base address) from x9 and 10 from x6 while the Extendunit extends the immediate offset 8 from 12 to 32 bits.
+0221A023 // SW,x7, 84(x3)
+0471AA23 // sw x2, 20(x3)
+00000013 // ADDI x1, x0, 0
+00000093 // ADDI x1, x0, 0
+00000113 // ADDI x2, x0, 0
+00000193 // ADDI x3, x0, 0
+00000213 // ADDI x4, x0, 0
+00000293 // ADDI x5, x0, 0
+00000313 // ADDI x6, x0, 0
+00000393 // ADDI x7, x0, 0
+00000413 // ADDI x8, x0, 0
+00000493 // ADDI x9, x0, 0
+00000513 // ADDI x10, x0, 0
+00000593 // ADDI x11, x0, 0
+00000613 // ADDI x12, x0, 0
+00000693 // ADDI x13, x0, 0
+00000713 // ADDI x14, x0, 0
+00000793 // ADDI x15, x0, 0
+00000813 // ADDI x16, x0, 0
+00000893 // ADDI x17, x0, 0
+00000913 // ADDI x18, x0, 0
+00000993 // ADDI x19, x0, 0
+00000A13 // ADDI x20, x0, 0
+00000A93 // ADDI x21, x0, 0
+00000B13 // ADDI x22, x0, 0
+00000B93 // ADDI x23, x0, 0
+00000C13 // ADDI x24, x0, 0
+00000C93 // ADDI x25, x0, 0
+00000D13 // ADDI x26, x0, 0
+00000D93 // ADDI x27, x0, 0
+00000E13 // ADDI x28, x0, 0
+00000E93 // ADDI x29, x0, 0
+00000F13 // ADDI x30, x0, 0
+00000F93 // ADDI x31, x0, 0
+00002023 //sw x0, 0(x0) 
+00102223 //sw x1, 0(x1) 
+00202423 //sw x2, 0(x2) 
+00302623 //sw x3, 0(x3) 
+00402823 //sw x4, 0(x4) 
+00502A23 //sw x5, 0(x5) 
+00602C23 //sw x6, 0(x6) 
+00702E23 //sw x7, 0(x7) 
+00803023 //sw x8, 0(x8) 
+0090322 //sw x9, 0(x9) 
+00000613 // ADDI x12, x0, 0
+00000693 // ADDI x13, x0, 0
+00000713 // ADDI x14, x0, 0
+00000793 // ADDI x15, x0, 0
+00000813 // ADDI x16, x0, 0
+00000893 // ADDI x17, x0, 0
+00000913 // ADDI x18, x0, 0
+00000993 // ADDI x19, x0, 0
+00000A13 // ADDI x20, x0, 0
+00000A93 // ADDI x21, x0, 0
+00000B13 // ADDI x22, x0, 0
+00000B93 // ADDI x23, x0, 0
+00000C13 // ADDI x24, x0, 0
+00000C93 // ADDI x25, x0, 0
+00000D13 // ADDI x26, x0, 0
+00000D93 // ADDI x27, x0, 0
+00000E13 // ADDI x28, x0, 0
+00000E93 // ADDI x29, x0, 0
+00000F13 // ADDI x30, x0, 0
+00000F93 // ADDI x31, x0, 0
+
+06002103 // lw    x2, 96(x0)          # x2 = [96] = 7         38         
