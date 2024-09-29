@@ -66,13 +66,16 @@ add wave -noupdate -group Controller /testbench/dut/riscv_single_cycle/c/ImmSrc
 add wave -noupdate -group Controller /testbench/dut/riscv_single_cycle/c/ALUControl
 add wave -noupdate -group Controller /testbench/dut/riscv_single_cycle/c/ALUOp
 add wave -noupdate -group Controller /testbench/dut/riscv_single_cycle/c/Branch
+add wave -noupdate -expand -group {extend } /testbench/dut/riscv_single_cycle/dp/ext/instr
+add wave -noupdate -expand -group {extend } /testbench/dut/riscv_single_cycle/dp/ext/immsrc
+add wave -noupdate -expand -group {extend } /testbench/dut/riscv_single_cycle/dp/ext/immext
 add wave -noupdate -expand -group register_file /testbench/dut/riscv_single_cycle/dp/rf/clk
 add wave -noupdate -expand -group register_file /testbench/dut/riscv_single_cycle/dp/rf/a1
 add wave -noupdate -expand -group register_file /testbench/dut/riscv_single_cycle/dp/rf/a2
 add wave -noupdate -expand -group register_file /testbench/dut/riscv_single_cycle/dp/rf/a3
 add wave -noupdate -expand -group register_file /testbench/dut/riscv_single_cycle/dp/rf/wd3
 add wave -noupdate -expand -group register_file /testbench/dut/riscv_single_cycle/dp/rf/rd1
-add wave -noupdate -expand -group register_file -expand /testbench/dut/riscv_single_cycle/dp/rf/rf
+add wave -noupdate -expand -group register_file /testbench/dut/riscv_single_cycle/dp/rf/rf
 add wave -noupdate -expand -group register_file -color Orchid /testbench/dut/riscv_single_cycle/dp/rf/we3
 add wave -noupdate -expand -group register_file /testbench/dut/riscv_single_cycle/dp/rf/rd2
 add wave -noupdate -expand -group datapath /testbench/dut/riscv_single_cycle/dp/clk
@@ -120,4 +123,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {104 ps} {232 ps}
+WaveRestoreZoom {32 ps} {247 ps}

@@ -61,9 +61,10 @@ module datapath (
       RD2
   );
 extend ext (
-      Instr_D[31:7],
-      ImmSrc,
-      ImmExt_D
+      Instr_D[31:7],  // Connect Instr_D[31:7] to instr port
+      Instr_D,  // Connect Instr_D[31:7] to instr port
+    ImmSrc,        // Connect ImmSrc to immsrc port
+    ImmExt_D 
   );
 // *------------------Execute phase----------------------------
 execute_phase exe_phase(
@@ -131,4 +132,4 @@ execute_phase exe_phase(
       ResultSrc,
       ResultW
   );
-endmodule
+endmodule   
