@@ -13,12 +13,18 @@ module datapath (
     input  logic [31:0] ReadData,
     output logic [31:0] PCF,
     output logic [31:0] ALUResult_M,
-    output logic        Zero_E
+    output logic        Zero_E,
+    output logic [4:0]  RSD1_E,
+    output logic [4:0] RSD2_E,
+    output logic [4:0] RdM,
+    output logic [4:0] RdW,
+    input logic [1:0] ForwardAE,
+    input logic [1:0] ForwardBE
 );
   logic [31:0] PCFNext, PCPlus4, PCTarget,PCTargetE,PCD,PCE;
   logic [31:0] PCPlus4_F,PCPlus4_D, PCPlus4_E,PCPlus4_M,PCPlus4_W;
-  logic [4:0] RdW,RdM,RdE,RSD1_E,RSD2_E;
-  logic [31:0] RD1,RD1E,RD2,RD2E;
+  logic [4:0] RdE;
+  logic [31:0] RD1,RD1E,RD2,RD2E,SRAE_MUX_RESULT,SRBE_MUX_RESULT;
   logic [31:0] ImmExt_D,ImmExt_E;
   logic [31:0] SrcA_E, SrcB,SrcB_E;
   logic [31:0] ALUResult_E,ALUResult_W;
@@ -63,8 +69,8 @@ module datapath (
 extend ext (
       Instr_D[31:7],  // Connect Instr_D[31:7] to instr port
       Instr_D,  // Connect Instr_D[31:7] to instr port
-    ImmSrc,        // Connect ImmSrc to immsrc port
-    ImmExt_D 
+      ImmSrc,        // Connect ImmSrc to immsrc port
+      ImmExt_D 
   );
 // *------------------Execute phase----------------------------
 execute_phase exe_phase(
@@ -92,14 +98,29 @@ execute_phase exe_phase(
       ImmExt_E,
       PCTargetE
   );
+  mux3 #(32) SrcA_E_MUX(
+    RD1E,
+    ResultW,
+    ALUResult_M,
+    ForwardAE,
+    SRAE_MUX_RESULT
+  );
+  mux3 #(32)SrcB_E_MUX(
+    RD2E,
+    ResultW,
+    ALUResult_M,
+    ForwardBE,
+    SRBE_MUX_RESULT
+  );
+
   mux2 #(32) srcbmux (
-      RD2E,
+      SRBE_MUX_RESULT,
       ImmExt_E,
       ALUSrc,
       SrcB_E
   );
   alu alu (
-      RD1E,
+      SRAE_MUX_RESULT,
       SrcB_E,
       ALUControl,
       ALUResult_E,
