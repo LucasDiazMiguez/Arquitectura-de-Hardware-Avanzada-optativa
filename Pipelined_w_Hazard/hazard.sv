@@ -31,7 +31,7 @@ always_comb begin
         //     ForwardBE = 2'b00;  // Default case
         // end
         //! WIPPPPPPPPPPPPPP
-            ForwardAE = 2'b10;
+            ForwardAE = 2'b00;
             ForwardBE = 2'b00;  // Default case
         end
 endmodule
