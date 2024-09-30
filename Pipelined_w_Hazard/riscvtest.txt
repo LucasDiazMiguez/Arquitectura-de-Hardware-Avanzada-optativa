@@ -1,66 +1,30 @@
-00000013 // addi x0, x0, 0
-00100093 // addi x1, x0, 1
-00200113 // addi x2, x0, 2
-00300193 // addi x3, x0, 3
-00400213 // addi x4, x0, 4
-00500293 // addi x5, x0, 5
-00600313 // addi x6, x0, 6
-00700393 // addi x7, x0, 7
-00800413 // addi x8, x0, 8
-00900493 // addi x9, x0, 9
-00A00513 // addi x10, x0, 10
-00B00593 // addi x11, x0, 11
-00C00613 // addi x12, x0, 12
-00D00693 // addi x13, x0, 13
-00E00713 // addi x14, x0, 14
-00F00793 // addi x15, x0, 15
-01000813 // addi x16, x0, 16
-01100893 // addi x17, x0, 17
-01200913 // addi x18, x0, 18
-01300993 // addi x19, x0, 19
-01400A13 // addi x20, x0, 20
-01500A93 // addi x21, x0, 21
-01600B13 // addi x22, x0, 22
-01700B93 // addi x23, x0, 23
-01800C13 // addi x24, x0, 24
-01900C93 // addi x25, x0, 25
-01A00D13 // addi x26, x0, 26
-01B00D93 // addi x27, x0, 27
-01C00E13 // addi x28, x0, 28
-01D00E93 // addi x29, x0, 29
-01E00F13 // addi x30, x0, 30
-01F00F93 // addi x31, x0, 31
-00202023 //SW x2,0 (x0)
-00202223 //SW x2,4 (x0)
-00202423 //SW x2,8 (x0)
-00202623 //SW x2,12 (x0)
-00202823 //SW x2,16 (x0)
-00202A23 //SW x2,20 (x0)
-00202C23 //SW x2,24 (x0)
-00202E23 //SW x2,28 (x0)
-02202023 //SW x2,32 (x0)
-02202223 //SW x2,36 (x0)
-02202423 //SW x2,40 (x0)
-02202623 //SW x2,44 (x0)
-02202823 //SW x2,48 (x0)
-02202A23 //SW x2,52 (x0)
-02202C23 //SW x2,56 (x0)
-02202E23 //SW x2,60 (x0)
-00002083 //   00002083  // guardo el valor ram(0) en el registro 1  del rf
-00402103 //   00402103  // guardo el valor ram(4) en el registro 2  del rf
-00802183 //   00802183  // guardo el valor ram(8) en el registro 3  del rf
-00C02203 //   00C02203  // guardo el valor ram(12) en el registro 4  del rf
-01002283 //   01002283  // guardo el valor ram(16) en el registro 5  del rf
-01402303 //   01402303  // guardo el valor ram(20) en el registro 6  del rf
-01802383 //   01802383  // guardo el valor ram(24) en el registro 7  del rf
-01C02403 //   01C02403  // guardo el valor ram(28) en el registro 8  del rf
-02002483 //   02002483  // guardo el valor ram(32) en el registro 9  del rf
-02402503 //   02402503  // guardo el valor ram(36) en el registro 10  del rf
-02802583 //   02802583  // guardo el valor ram(40) en el registro 11  del rf
-02C02603 //   02C02603  // guardo el valor ram(44) en el registro 12 del rf
-01A00D13 // addi x26, x0, 26
-01B00D93 // addi x27, x0, 27
-01C00E13 // addi x28, x0, 28
-01D00E93 // addi x29, x0, 29
- 
+00200093
+00200113
+00200193
+00200213
+00200313
+01408293 // addi x10, x1, 20 
+FCE18113 // addi x2, x3, -50 
+00200393
+00200413
+00200493
+00200513
+00200593
+00200613
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
