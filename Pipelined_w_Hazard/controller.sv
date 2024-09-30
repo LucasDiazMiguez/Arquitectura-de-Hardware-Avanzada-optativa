@@ -11,7 +11,9 @@ module controller (
     output logic [3:0] ALUControl,
     output logic       ALUSrc,
     output logic [1:0] ImmSrc_D,
-    output logic       PCSrcE
+    output logic       PCSrcE,
+    output logic       RegWrite_M,
+    output logic       RegWrite_W
 );
   typedef enum logic [3:0] {
     decode_state,
@@ -21,7 +23,7 @@ module controller (
   } statetype;  //states for decoding instructions
   statetype state, nextstate;
   logic [1:0] ALUOp;
-  logic RegWrite_D, RegWrite_E, RegWrite_M, RegWrite_W;
+  logic RegWrite_D, RegWrite_E;
   logic [1:0] ResultSrc_D, ResultSrc_E, ResultSrc_M, ResultSrc_W;
   logic MemWrite_D, MemWrite_E, MemWrite_M;
   logic [3:0] ALUControl_D, ALUControl_E;
@@ -29,45 +31,21 @@ module controller (
   logic Jump_D, Jump_E, Jump;
   logic ALUSrc_D, ALUSrc_E;
 
-  always_ff @(posedge clk, posedge reset) begin
-    if (reset) state <= decode_state;
-    else state <= nextstate;
-  end
+  // always_ff @(posedge clk, posedge reset) begin
+  //   if (reset) state <= decode_state;
+  //   else state <= nextstate;
+  // end
   always_comb
-    case (state)
-      decode_state: begin
-        RegWrite = RegWrite_D;
-        ResultSrc = ResultSrc_D;
-        MemWrite = MemWrite_D;
-        Jump = Jump_D;
-        Branch = Branch_D;
-        ALUControl = ALUControl_D;
-        ALUSrc = ALUSrc_D;
-        nextstate = execute_state;
-      end
-      execute_state: begin
-        RegWrite = RegWrite_E;
-        ResultSrc = ResultSrc_E;
-        MemWrite = MemWrite_E;
-        Jump = Jump_E;
-        Branch = Branch_E;
-        ALUControl = ALUControl_E;
-        ALUSrc = ALUSrc_E;
-        nextstate = mem_state;
-      end
-      mem_state: begin
-        RegWrite  = RegWrite_M;
-        ResultSrc = ResultSrc_M;
-        MemWrite  = MemWrite_M;
-        nextstate = write_state;
-      end
-      write_state: begin
-        RegWrite  = RegWrite_W;
-        ResultSrc = ResultSrc_W;
-        nextstate = decode_state;
-      end
-      default: nextstate = decode_state;
-    endcase 
+  begin
+    ALUSrc = ALUSrc_E;
+    MemWrite = MemWrite_M;
+    ALUControl = ALUControl_E;
+    Jump = Jump_E;
+    Branch = Branch_E;
+    MemWrite = MemWrite_M;
+    ResultSrc = ResultSrc_W;
+    RegWrite = RegWrite_W;
+  end
 
   maindec md (
       op,
