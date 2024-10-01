@@ -24,7 +24,7 @@ module riscv_pipelined_cycle (
       Instr_D[6:0],
       Instr_D[14:12],
       Instr_D[30],
-      Zero,
+      Zero_E,
       RegWrite,
       ResultSrc,
       MemWrite,
