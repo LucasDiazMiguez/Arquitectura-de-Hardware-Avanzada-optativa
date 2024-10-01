@@ -38,7 +38,7 @@ module testbench ();
     //  end
   end
   always @(negedge clk) begin
-    if ($realtime > 10ns) begin
+    if ($realtime > 15ns) begin
       $stop();
     end
   end
