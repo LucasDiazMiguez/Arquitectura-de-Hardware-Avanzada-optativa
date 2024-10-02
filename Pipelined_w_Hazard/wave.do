@@ -29,9 +29,7 @@ add wave -noupdate -group RISC_V_pipelined /testbench/dut/riscv_pipelined_cycle/
 add wave -noupdate -group RISC_V_pipelined /testbench/dut/riscv_pipelined_cycle/Rs1D
 add wave -noupdate -group RISC_V_pipelined /testbench/dut/riscv_pipelined_cycle/Rdm
 add wave -noupdate -group RISC_V_pipelined /testbench/dut/riscv_pipelined_cycle/Instr_D
-add wave -noupdate -group RISC_V_pipelined /testbench/dut/riscv_pipelined_cycle/Zero
-add wave -noupdate -group RISC_V_pipelined /testbench/dut/riscv_pipelined_cycle/PCSrc
-add wave -noupdate -expand -group Dmem -label {RAM from DATA MEM} /testbench/dut/dmem/RAM
+add wave -noupdate -expand -group Dmem -label {RAM from DATA MEM} -expand /testbench/dut/dmem/RAM
 add wave -noupdate -expand -group Dmem /testbench/dut/dmem/clk
 add wave -noupdate -expand -group Dmem /testbench/dut/dmem/we
 add wave -noupdate -expand -group Dmem /testbench/dut/dmem/a
@@ -42,7 +40,7 @@ add wave -noupdate -expand -group IMEM /testbench/dut/imem/rd
 add wave -noupdate -divider CONTROLLER
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/clk
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/reset
-add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/op
+add wave -noupdate -expand -group Controller -radix decimal /testbench/dut/riscv_pipelined_cycle/c/op
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/funct3
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/funct7b5
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/Zero_E
@@ -70,18 +68,16 @@ add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycl
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/MemWrite
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/ALUControl_D
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/ALUControl_E
-add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/Branch
+add wave -noupdate -expand -group Controller -color Blue /testbench/dut/riscv_pipelined_cycle/c/Branch
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/Branch_D
-add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/Branch_E
+add wave -noupdate -expand -group Controller -color Orchid /testbench/dut/riscv_pipelined_cycle/c/Branch_E
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/Jump_D
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/Jump_E
-add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/Jump
-add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/state
-add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/nextstate
+add wave -noupdate -expand -group Controller -color Orchid /testbench/dut/riscv_pipelined_cycle/c/Jump
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/ALUSrc_D
 add wave -noupdate -expand -group Controller /testbench/dut/riscv_pipelined_cycle/c/ALUSrc_E
 add wave -noupdate -color {Orange Red} /testbench/dut/riscv_pipelined_cycle/c/ALUSrc
-add wave -noupdate -expand -group MAIN_DEC -radix binary /testbench/dut/riscv_pipelined_cycle/c/md/op
+add wave -noupdate -expand -group MAIN_DEC -radix decimal /testbench/dut/riscv_pipelined_cycle/c/md/op
 add wave -noupdate -expand -group MAIN_DEC /testbench/dut/riscv_pipelined_cycle/c/md/ResultSrc
 add wave -noupdate -expand -group MAIN_DEC /testbench/dut/riscv_pipelined_cycle/c/md/MemWrite
 add wave -noupdate -expand -group MAIN_DEC /testbench/dut/riscv_pipelined_cycle/c/md/Branch
@@ -91,29 +87,29 @@ add wave -noupdate -expand -group MAIN_DEC /testbench/dut/riscv_pipelined_cycle/
 add wave -noupdate -expand -group MAIN_DEC /testbench/dut/riscv_pipelined_cycle/c/md/ImmSrc
 add wave -noupdate -expand -group MAIN_DEC /testbench/dut/riscv_pipelined_cycle/c/md/ALUOp
 add wave -noupdate -expand -group MAIN_DEC /testbench/dut/riscv_pipelined_cycle/c/md/controls
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/clk
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/RegWrite_D
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ResultSrc_D
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/MemWrite_D
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/Jump_D
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/Branch_D
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ALUControl_D
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ALUSrc_D
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/RegWrite_E
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ResultSrc_E
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/MemWrite_E
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/Jump_E
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/Branch_E
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ALUControl_E
-add wave -noupdate -expand -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ALUSrc_E
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/clk
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/RegWrite_D
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ResultSrc_D
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/MemWrite_D
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/Jump_D
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/Branch_D
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ALUControl_D
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ALUSrc_D
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/RegWrite_E
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ResultSrc_E
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/MemWrite_E
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/Jump_E
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/Branch_E
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ALUControl_E
+add wave -noupdate -group Exe_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/exe_phase/ALUSrc_E
 add wave -noupdate -color {Orange Red} /testbench/dut/riscv_pipelined_cycle/c/ALUSrc
-add wave -noupdate -expand -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/clk
-add wave -noupdate -expand -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/RegWrite_E
-add wave -noupdate -expand -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/ResultSrc_E
-add wave -noupdate -expand -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/MemWrite_E
-add wave -noupdate -expand -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/RegWrite_M
-add wave -noupdate -expand -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/ResultSrc_M
-add wave -noupdate -expand -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/MemWrite_M
+add wave -noupdate -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/clk
+add wave -noupdate -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/RegWrite_E
+add wave -noupdate -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/ResultSrc_E
+add wave -noupdate -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/MemWrite_E
+add wave -noupdate -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/RegWrite_M
+add wave -noupdate -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/ResultSrc_M
+add wave -noupdate -group mem_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/mem_phase/MemWrite_M
 add wave -noupdate -expand -group write_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/write_phase/clk
 add wave -noupdate -expand -group write_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/write_phase/RegWrite_M
 add wave -noupdate -expand -group write_phase_CONTROLLER /testbench/dut/riscv_pipelined_cycle/c/write_phase/ResultSrc_M
@@ -177,78 +173,82 @@ add wave -noupdate -group DATAPATH_DP /testbench/dut/riscv_pipelined_cycle/dp/AL
 add wave -noupdate -group DATAPATH_DP /testbench/dut/riscv_pipelined_cycle/dp/ResultW
 add wave -noupdate -group DATAPATH_DP /testbench/dut/riscv_pipelined_cycle/dp/ReadDataW
 add wave -noupdate -divider DATA_PATH
-add wave -noupdate -expand /testbench/dut/riscv_pipelined_cycle/dp/rf/rf
+add wave -noupdate -childformat {{{/testbench/dut/riscv_pipelined_cycle/dp/rf/rf[8]} -radix hexadecimal} {{/testbench/dut/riscv_pipelined_cycle/dp/rf/rf[7]} -radix hexadecimal}} -expand -subitemconfig {{/testbench/dut/riscv_pipelined_cycle/dp/rf/rf[9]} {-color {Medium Violet Red} -height 15} {/testbench/dut/riscv_pipelined_cycle/dp/rf/rf[8]} {-height 15 -radix hexadecimal} {/testbench/dut/riscv_pipelined_cycle/dp/rf/rf[7]} {-height 15 -radix hexadecimal}} /testbench/dut/riscv_pipelined_cycle/dp/rf/rf
 add wave -noupdate /testbench/dut/riscv_pipelined_cycle/dp/Instr_F
 add wave -noupdate /testbench/dut/riscv_pipelined_cycle/dp/Instr_D
-add wave -noupdate -group PC_REG /testbench/dut/riscv_pipelined_cycle/dp/pcreg/clk
-add wave -noupdate -group PC_REG /testbench/dut/riscv_pipelined_cycle/dp/pcreg/reset
-add wave -noupdate -group PC_REG /testbench/dut/riscv_pipelined_cycle/dp/pcreg/d
-add wave -noupdate -group PC_REG /testbench/dut/riscv_pipelined_cycle/dp/pcreg/q
-add wave -noupdate -group PC_ADD_4 /testbench/dut/riscv_pipelined_cycle/dp/pcadd4/a
-add wave -noupdate -group PC_ADD_4 /testbench/dut/riscv_pipelined_cycle/dp/pcadd4/b
-add wave -noupdate -group PC_ADD_4 /testbench/dut/riscv_pipelined_cycle/dp/pcadd4/y
-add wave -noupdate -group PC_MUX /testbench/dut/riscv_pipelined_cycle/dp/pcmux/d0
-add wave -noupdate -group PC_MUX /testbench/dut/riscv_pipelined_cycle/dp/pcmux/d1
-add wave -noupdate -group PC_MUX /testbench/dut/riscv_pipelined_cycle/dp/pcmux/s
-add wave -noupdate -group PC_MUX /testbench/dut/riscv_pipelined_cycle/dp/pcmux/y
-add wave -noupdate -group PC_ADD_BRANCH /testbench/dut/riscv_pipelined_cycle/dp/pcaddbranch/a
-add wave -noupdate -group PC_ADD_BRANCH /testbench/dut/riscv_pipelined_cycle/dp/pcaddbranch/b
-add wave -noupdate -group PC_ADD_BRANCH /testbench/dut/riscv_pipelined_cycle/dp/pcaddbranch/y
-add wave -noupdate -expand -group DEC_Phase_DP /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/clk
-add wave -noupdate -expand -group DEC_Phase_DP /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/InstrF
-add wave -noupdate -expand -group DEC_Phase_DP /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCF
-add wave -noupdate -expand -group DEC_Phase_DP /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCPlus4F
-add wave -noupdate -expand -group DEC_Phase_DP /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/InstrD
-add wave -noupdate -expand -group DEC_Phase_DP /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCD
-add wave -noupdate -expand -group DEC_Phase_DP /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCPlus4D
+add wave -noupdate -expand -group pc_reg /testbench/dut/riscv_pipelined_cycle/dp/pcreg/clk
+add wave -noupdate -expand -group pc_reg /testbench/dut/riscv_pipelined_cycle/dp/pcreg/reset
+add wave -noupdate -expand -group pc_reg /testbench/dut/riscv_pipelined_cycle/dp/pcreg/en
+add wave -noupdate -expand -group pc_reg /testbench/dut/riscv_pipelined_cycle/dp/pcreg/d
+add wave -noupdate -expand -group pc_reg /testbench/dut/riscv_pipelined_cycle/dp/pcreg/q
+add wave -noupdate -expand -group PC_ADD_4 /testbench/dut/riscv_pipelined_cycle/dp/pcadd4/a
+add wave -noupdate -expand -group PC_ADD_4 /testbench/dut/riscv_pipelined_cycle/dp/pcadd4/b
+add wave -noupdate -expand -group PC_ADD_4 /testbench/dut/riscv_pipelined_cycle/dp/pcadd4/y
+add wave -noupdate -expand -group PC_MUX -radix unsigned /testbench/dut/riscv_pipelined_cycle/dp/pcmux/d0
+add wave -noupdate -expand -group PC_MUX -radix unsigned /testbench/dut/riscv_pipelined_cycle/dp/pcmux/d1
+add wave -noupdate -expand -group PC_MUX /testbench/dut/riscv_pipelined_cycle/dp/pcmux/s
+add wave -noupdate -expand -group PC_MUX -radix unsigned /testbench/dut/riscv_pipelined_cycle/dp/pcmux/y
+add wave -noupdate -expand -group PC_ADD_BRANCH /testbench/dut/riscv_pipelined_cycle/dp/pcaddbranch/a
+add wave -noupdate -expand -group PC_ADD_BRANCH -radix decimal /testbench/dut/riscv_pipelined_cycle/dp/pcaddbranch/b
+add wave -noupdate -expand -group PC_ADD_BRANCH /testbench/dut/riscv_pipelined_cycle/dp/pcaddbranch/y
+add wave -noupdate -color Magenta /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/InstrD
 add wave -noupdate -expand -group RF_DP /testbench/dut/riscv_pipelined_cycle/dp/rf/clk
 add wave -noupdate -expand -group RF_DP /testbench/dut/riscv_pipelined_cycle/dp/rf/we3
-add wave -noupdate -expand -group RF_DP /testbench/dut/riscv_pipelined_cycle/dp/rf/a1
-add wave -noupdate -expand -group RF_DP /testbench/dut/riscv_pipelined_cycle/dp/rf/a2
+add wave -noupdate -expand -group RF_DP -radix decimal /testbench/dut/riscv_pipelined_cycle/dp/rf/a1
+add wave -noupdate -expand -group RF_DP -radix decimal /testbench/dut/riscv_pipelined_cycle/dp/rf/a2
 add wave -noupdate -expand -group RF_DP -radix unsigned /testbench/dut/riscv_pipelined_cycle/dp/rf/a3
 add wave -noupdate -expand -group RF_DP /testbench/dut/riscv_pipelined_cycle/dp/rf/wd3
 add wave -noupdate -expand -group RF_DP /testbench/dut/riscv_pipelined_cycle/dp/rf/rd1
 add wave -noupdate -expand -group RF_DP /testbench/dut/riscv_pipelined_cycle/dp/rf/rd2
+add wave -noupdate -expand -group {dec_phases_new __DP} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/clk
+add wave -noupdate -expand -group {dec_phases_new __DP} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/en
+add wave -noupdate -expand -group {dec_phases_new __DP} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/InstrF
+add wave -noupdate -expand -group {dec_phases_new __DP} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCF
+add wave -noupdate -expand -group {dec_phases_new __DP} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCPlus4F
+add wave -noupdate -expand -group {dec_phases_new __DP} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/InstrD
+add wave -noupdate -expand -group {dec_phases_new __DP} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCD
+add wave -noupdate -expand -group {dec_phases_new __DP} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCPlus4D
 add wave -noupdate -expand -group {Extend _DEC} /testbench/dut/riscv_pipelined_cycle/dp/Instr_F
 add wave -noupdate -expand -group {Extend _DEC} /testbench/dut/dmem/we
-add wave -noupdate -expand -group {Extend _DEC} -radix binary /testbench/dut/riscv_pipelined_cycle/dp/Instr_D
+add wave -noupdate -expand -group {Extend _DEC} -radix hexadecimal /testbench/dut/riscv_pipelined_cycle/dp/Instr_D
 add wave -noupdate -expand -group {Extend _DEC} -radix binary /testbench/dut/riscv_pipelined_cycle/dp/ext/instr
 add wave -noupdate -expand -group {Extend _DEC} /testbench/dut/riscv_pipelined_cycle/dp/ext/immsrc
 add wave -noupdate -expand -group {Extend _DEC} -color Orchid /testbench/dut/riscv_pipelined_cycle/dp/ext/immext
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/clk
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/reset
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RD1
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RD2
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/PCD
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/ImmExt_D
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/PC_Plus4D
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RdD
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/Rs1D
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/Rs2D
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RdE
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RSD1_E
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RSD2_E
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RD1E
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RD2E
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/PCE
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/ImmExt_E
-add wave -noupdate -expand -group exe_phase_dp /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/PC_Plus4E
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/clk
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/FlushE
+add wave -noupdate -expand -group EXE_PHASE_NEW -radix hexadecimal /testbench/dut/riscv_pipelined_cycle/dp/Instr_D
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RD1
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RD2
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/PCD
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/ImmExt_D
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/PC_Plus4D
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RdD
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/Rs1D
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/Rs2D
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RdE
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RSD1_E
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RSD2_E
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RD1E
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/RD2E
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/PCE
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/ImmExt_E
+add wave -noupdate -expand -group EXE_PHASE_NEW /testbench/dut/riscv_pipelined_cycle/dp/exe_phase/PC_Plus4E
 add wave -noupdate -group SrcA_E_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcA_E_MUX/d0
 add wave -noupdate -group SrcA_E_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcA_E_MUX/d1
 add wave -noupdate -group SrcA_E_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcA_E_MUX/d2
 add wave -noupdate -group SrcA_E_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcA_E_MUX/s
 add wave -noupdate -group SrcA_E_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcA_E_MUX/y
-add wave -noupdate -expand -group SRCB_E_HAZ_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcB_E_MUX/d0
-add wave -noupdate -expand -group SRCB_E_HAZ_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcB_E_MUX/d1
-add wave -noupdate -expand -group SRCB_E_HAZ_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcB_E_MUX/d2
-add wave -noupdate -expand -group SRCB_E_HAZ_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcB_E_MUX/s
-add wave -noupdate -expand -group SRCB_E_HAZ_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcB_E_MUX/y
-add wave -noupdate -expand -group SRCB_MUX_DP /testbench/dut/riscv_pipelined_cycle/dp/srcbmux/d0
-add wave -noupdate -expand -group SRCB_MUX_DP /testbench/dut/riscv_pipelined_cycle/dp/srcbmux/d1
-add wave -noupdate -expand -group SRCB_MUX_DP /testbench/dut/riscv_pipelined_cycle/dp/srcbmux/s
-add wave -noupdate -expand -group SRCB_MUX_DP /testbench/dut/riscv_pipelined_cycle/dp/srcbmux/y
-add wave -noupdate -expand -group ALU_DP /testbench/dut/riscv_pipelined_cycle/dp/alu/SrcA
-add wave -noupdate -expand -group ALU_DP /testbench/dut/riscv_pipelined_cycle/dp/alu/SrcB
+add wave -noupdate -group SRCB_E_HAZ_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcB_E_MUX/d0
+add wave -noupdate -group SRCB_E_HAZ_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcB_E_MUX/d1
+add wave -noupdate -group SRCB_E_HAZ_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcB_E_MUX/d2
+add wave -noupdate -group SRCB_E_HAZ_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcB_E_MUX/s
+add wave -noupdate -group SRCB_E_HAZ_MUX /testbench/dut/riscv_pipelined_cycle/dp/SrcB_E_MUX/y
+add wave -noupdate -group SRCB_MUX_DP /testbench/dut/riscv_pipelined_cycle/dp/srcbmux/d0
+add wave -noupdate -group SRCB_MUX_DP /testbench/dut/riscv_pipelined_cycle/dp/srcbmux/d1
+add wave -noupdate -group SRCB_MUX_DP /testbench/dut/riscv_pipelined_cycle/dp/srcbmux/s
+add wave -noupdate -group SRCB_MUX_DP /testbench/dut/riscv_pipelined_cycle/dp/srcbmux/y
+add wave -noupdate -expand -group ALU_DP -radix decimal /testbench/dut/riscv_pipelined_cycle/dp/alu/SrcA
+add wave -noupdate -expand -group ALU_DP -radix decimal /testbench/dut/riscv_pipelined_cycle/dp/alu/SrcB
 add wave -noupdate -expand -group ALU_DP /testbench/dut/riscv_pipelined_cycle/dp/alu/ALUControl
 add wave -noupdate -expand -group ALU_DP /testbench/dut/riscv_pipelined_cycle/dp/alu/ALUResult
 add wave -noupdate -expand -group ALU_DP /testbench/dut/riscv_pipelined_cycle/dp/alu/Zero
@@ -270,24 +270,43 @@ add wave -noupdate -group WRITE_PHASE_DP /testbench/dut/riscv_pipelined_cycle/dp
 add wave -noupdate -group WRITE_PHASE_DP /testbench/dut/riscv_pipelined_cycle/dp/wri_phase/ReadDataW
 add wave -noupdate -group WRITE_PHASE_DP /testbench/dut/riscv_pipelined_cycle/dp/wri_phase/RdW
 add wave -noupdate -group WRITE_PHASE_DP /testbench/dut/riscv_pipelined_cycle/dp/wri_phase/PC_Plus4W
-add wave -noupdate -group RESULTMUX_DP /testbench/dut/riscv_pipelined_cycle/dp/resultmux/d0
-add wave -noupdate -group RESULTMUX_DP /testbench/dut/riscv_pipelined_cycle/dp/resultmux/d1
-add wave -noupdate -group RESULTMUX_DP /testbench/dut/riscv_pipelined_cycle/dp/resultmux/d2
-add wave -noupdate -group RESULTMUX_DP /testbench/dut/riscv_pipelined_cycle/dp/resultmux/s
-add wave -noupdate -group RESULTMUX_DP /testbench/dut/riscv_pipelined_cycle/dp/resultmux/y
-add wave -noupdate -expand -group HAZARD /testbench/dut/riscv_pipelined_cycle/dp/Instr_F
-add wave -noupdate -expand -group HAZARD /testbench/dut/riscv_pipelined_cycle/dp/Instr_D
-add wave -noupdate -expand -group HAZARD /testbench/dut/riscv_pipelined_cycle/hz/RSD1_E
-add wave -noupdate -expand -group HAZARD /testbench/dut/riscv_pipelined_cycle/hz/RSD2_E
-add wave -noupdate -expand -group HAZARD /testbench/dut/riscv_pipelined_cycle/hz/RdM
-add wave -noupdate -expand -group HAZARD /testbench/dut/riscv_pipelined_cycle/hz/RdW
-add wave -noupdate -expand -group HAZARD /testbench/dut/riscv_pipelined_cycle/hz/RegWrite_M
-add wave -noupdate -expand -group HAZARD /testbench/dut/riscv_pipelined_cycle/hz/RegWrite_W
-add wave -noupdate -expand -group HAZARD /testbench/dut/riscv_pipelined_cycle/hz/ForwardAE
-add wave -noupdate -expand -group HAZARD /testbench/dut/riscv_pipelined_cycle/hz/ForwardBE
+add wave -noupdate -expand -group RESULTMUX_DP /testbench/dut/riscv_pipelined_cycle/dp/resultmux/d0
+add wave -noupdate -expand -group RESULTMUX_DP /testbench/dut/riscv_pipelined_cycle/dp/resultmux/d1
+add wave -noupdate -expand -group RESULTMUX_DP /testbench/dut/riscv_pipelined_cycle/dp/resultmux/d2
+add wave -noupdate -expand -group RESULTMUX_DP /testbench/dut/riscv_pipelined_cycle/dp/resultmux/s
+add wave -noupdate -expand -group RESULTMUX_DP /testbench/dut/riscv_pipelined_cycle/dp/resultmux/y
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/clk
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/reset
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/RSD1_E
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/RSD2_E
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/RdE
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/RdM
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/RdW
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/RegWrite_M
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/RegWrite_W
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/ForwardAE
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/ForwardBE
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/ResultSrc_E0
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/Rs1D
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/Rs2D
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/StallF
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/StallD
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/FlushE
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/FlushD
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/PCSrcE
+add wave -noupdate -expand -group {new hazard} /testbench/dut/riscv_pipelined_cycle/hz/lwStall
+add wave -noupdate -expand -group {new dec phase} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/clk
+add wave -noupdate -expand -group {new dec phase} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/en
+add wave -noupdate -expand -group {new dec phase} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/FlushD
+add wave -noupdate -expand -group {new dec phase} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/InstrF
+add wave -noupdate -expand -group {new dec phase} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCF
+add wave -noupdate -expand -group {new dec phase} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCPlus4F
+add wave -noupdate -expand -group {new dec phase} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/InstrD
+add wave -noupdate -expand -group {new dec phase} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCD
+add wave -noupdate -expand -group {new dec phase} /testbench/dut/riscv_pipelined_cycle/dp/dec_phase/PCPlus4D
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 6} {59 ps} 0}
-quietly wave cursor active 1
+WaveRestoreCursors {aaaaaaaaaa {512 ps} 1} {{Cursor 2} {14730 ps} 0}
+quietly wave cursor active 2
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -302,4 +321,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {2 ps} {174 ps}
+WaveRestoreZoom {78 ps} {463 ps}
