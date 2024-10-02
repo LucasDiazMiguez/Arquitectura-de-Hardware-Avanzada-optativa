@@ -138,7 +138,7 @@ execute_phase exe_phase(
     memory_phase mem_phase(
             clk,
             ALUResult_E,
-            RD2E,
+            SRBE_MUX_RESULT,
             RdE,
             PCPlus4_E,
             ALUResult_M,
