@@ -8,7 +8,7 @@ module riscv_pipelined_cycle (
     output logic [31:0] ALUResult_M,
     WriteData_M
 );
-  logic ALUSrc,  Zero_E;
+  logic ALUSrc,  Zero_E,PCSrcE;
   logic RegWrite;
   logic RegWrite_M;
   logic RegWrite_W;
@@ -35,7 +35,7 @@ module riscv_pipelined_cycle (
       ALUControl,
       ALUSrc,
       ImmSrc,
-      PCSrc,
+      PCSrcE,
       RegWrite_M,
       RegWrite_W,
       ResultSrc_E0
@@ -44,7 +44,7 @@ module riscv_pipelined_cycle (
       clk,
       reset,
       ResultSrc,
-      PCSrc,
+      PCSrcE,
       ALUSrc,
       RegWrite,
       ImmSrc,
@@ -65,7 +65,8 @@ module riscv_pipelined_cycle (
       ForwardBE,
       StallF,
       StallD,
-      FlushE
+      FlushE,
+      FlushD
       );
   hazard hz(
       clk,
@@ -84,6 +85,8 @@ module riscv_pipelined_cycle (
       Instr_D[24:20],//RsD2
       StallF,
       StallD,
-      FlushE
+      FlushE,
+      FlushD,
+      PCSrcE
   );
 endmodule

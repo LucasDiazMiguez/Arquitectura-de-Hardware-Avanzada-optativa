@@ -23,7 +23,8 @@ module datapath (
     input logic [1:0] ForwardBE,
     input logic StallF,
     input logic StallD,
-    input logic FlushE
+    input logic FlushE,
+    input logic FlushD
 );
   logic [31:0] PCFNext, PCPlus4, PCTarget,PCTargetE,PCD,PCE;
   logic [31:0] PCPlus4_F,PCPlus4_D, PCPlus4_E,PCPlus4_M,PCPlus4_W;
@@ -57,6 +58,7 @@ module datapath (
   decode_phase dec_phase(
         clk,
         (!StallD),
+        FlushD,
         Instr_F,PCF,PCPlus4_F,
         Instr_D,PCD,PCPlus4_D
   );

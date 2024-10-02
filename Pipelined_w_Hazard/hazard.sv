@@ -15,7 +15,9 @@ module hazard (
     input logic [4:0] Rs2D,
     output logic StallF,
     output logic StallD,
-    output logic FlushE
+    output logic FlushE,
+    output logic FlushD,
+    input logic PCSrcE
 );
 logic lwStall = 1;
 
@@ -40,6 +42,7 @@ always_comb begin
         lwStall = (ResultSrc_E0 && ((Rs1D == RdE) || (Rs2D == RdE)));
         StallF = lwStall;
         StallD = lwStall;
-        FlushE = lwStall;
+        FlushD = PCSrcE;
+        FlushE = lwStall | PCSrcE;
         end
 endmodule

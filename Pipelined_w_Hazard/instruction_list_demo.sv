@@ -1,4 +1,13 @@
-//*
+//*VER BUG DEL FORWARD EL INMEDIATo RTA+= I-type 
+//*                                 instruction that randomly 
+//*                                 causes a false match between 
+//*                                 bits in their immediate fields 
+//*                                 and RdE. However, these 
+//*                                 cases are rare (and poor 
+//*                                 coding practice, in the case of 
+//*                                 x0 being the load destination) 
+//*                                 and they cause only a small 
+//*                                 performance loss. 
 00200093 //ADDI x1, x0, 2
 00200113 //ADDI x2, x0, 2
 00200193  //ADDI x3, x0, 2 
@@ -268,3 +277,176 @@
 02208263 // BEQ BEQ x1, x2, offset si x1 == x2
 00000B13 //ADDI x22, x0, 0
 //*
+
+00200093//ADDI x1, x0, 2
+00300113//ADDI x2, x0, 3
+00400193//ADDI x3, x0, 4
+00500213//ADDI x4, x0, 5
+00600293//ADDI x5, x0, 6
+00700313//ADDI x6, x0, 7
+00800393//ADDI x7, x0, 8
+00900413//ADDI x8, x0, 9
+00A00493//ADDI x9, x0, A
+00B00513//ADDI x10, x0, B
+00C00593//ADDI x11, x0, C
+00D00613 //ADDI x12, x0, D
+00000693 //ADDI x13, x0, 0
+00000713 //ADDI x14, x0, 0
+00000793 //ADDI x15, x0, 0
+00000813 //ADDI x16, x0, 0
+00000893 //ADDI x17, x0, 0
+00000913 //ADDI x18, x0, 0
+00000993 //ADDI x19, x0, 0
+00000A13 //ADDI x20, x0, 0
+00000A93 //ADDI x21, x0, 0
+00000B13 //ADDI x22, x0, 0
+00000B93 //ADDI x23, x0, 0
+00000C13 //ADDI x24, x0, 0
+00000C93 //ADDI x25, x0, 0
+00000D13 //ADDI x26, x0, 0
+00000D93 //ADDI x27, x0, 0
+00000E13 //ADDI x28, x0, 0
+00000E93 //ADDI x29, x0, 0
+00000F13 //ADDI x30, x0, 0
+00000F93 //ADDI x31, x0, 0
+00202023 //SW x2,0 (x0)
+00302223 //SW x3,4 (x0)
+00402423 //SW x4,8 (x0)
+00502623 //SW x5,12 (x0)
+00602823 //SW x6,16 (x0)
+00702A23 //SW x7,20 (x0)
+00802C23 //SW x8,24 (x0)
+00902E23 //SW x9,28 (x0)
+02A02023 //SW xA,32 (x0)
+02B02223 //SW xB,36 (x0)
+02C02423 //SW xC,40 (x0)
+02D02623 //SW xD,44 (x0)
+02002823 //SW x2,48 (x0)
+02002A23 //SW x2,52 (x0)
+02202C23 //SW x2,56 (x0)
+02202E23 //SW x2,60 (x0)
+00002083  // guardo el valor ram(0) en el registro 1  del rf
+00402103  // guardo el valor ram(4) en el registro 2  del rf
+00802183  // guardo el valor ram(8) en el registro 3  del rf
+00C02203  // guardo el valor ram(12) en el registro 4  del rf
+01002283  // guardo el valor ram(16) en el registro 5  del rf
+01402303  // guardo el valor ram(20) en el registro 6  del rf
+01802383  // guardo el valor ram(24) en el registro 7  del rf
+01C02403  // guardo el valor ram(28) en el registro 8  del rf
+02002483  // guardo el valor ram(32) en el registro 9  del rf
+02402503  // guardo el valor ram(36) en el registro 10  del rf
+02802583  // guardo el valor ram(40) en el registro 11  del rf
+02C02603  // guardo el valor ram(44) en el registro 12 del rf
+00000613 //ADDI x12, x0, 0
+00000693 //ADDI x13, x0, 0
+00000713 //ADDI x14, x0, 0
+00000793 //ADDI x15, x0, 0
+00000813 //ADDI x16, x0, 0
+00000893 //ADDI x17, x0, 0
+00000913 //ADDI x18, x0, 0
+00000993 //ADDI x19, x0, 0
+00000A13 //ADDI x20, x0, 0
+00000A93 //ADDI x21, x0, 0
+00000B13 //ADDI x22, x0, 0
+00000B93 //ADDI x23, x0, 0
+00000C13 //ADDI x24, x0, 0
+00000C93 //ADDI x25, x0, 0
+00000D13 //ADDI x26, x0, 0
+00000D93 //ADDI x27, x0, 0
+00000E13 //ADDI x28, x0, 0
+00000E93 //ADDI x29, x0, 0
+00000F13 //ADDI x30, x0, 0
+00000F93 //ADDI x31, x0, 0
+002B2633 //compara x2 con x22 y guardo en x12 SLT x12,x2,x22
+016126B3 //compara x22 con x2 y guardo en x13 
+003BA733 // compara x3 con x23 y guardo en x14 
+0171A7B3 // compara x23 con x3 y guardo en x15 
+004C2833 // compara x4 con x24 y guardo en x16 
+018228B3 // compara x24 con x4 y guardo en x17 
+00000A93 //ADDI x21, x0, 0
+02208263 // BEQ BEQ x1, x2, offset si x1 == x2
+07fe4863 // BEQ x30, x31, 48
+00000B13 //ADDI x22, x0, 0
+00000B93 //ADDI x23, x0, 0
+00000C13 //ADDI x24, x0, 0
+00000C93 //ADDI x25, x0, 0
+00000D13 //ADDI x26, x0, 0
+00000D93 //ADDI x27, x0, 0
+00000E13 //ADDI x28, x0, 0
+00000E93 //ADDI x29, x0, 0
+00000F13 //ADDI x30, x0, 0
+00000F93 //ADDI x31, x0, 0  
+//////* FORWARD HAZARD TESTING
+00200093//ADDI x1, x0, 2
+00300113//ADDI x2, x0, 3
+00400193//ADDI x3, x0, 4
+00500213//ADDI x4, x0, 5
+00600293//ADDI x5, x0, 6
+00700313//ADDI x6, x0, 7
+00800393//ADDI x7, x0, 8
+00900413//ADDI x8, x0, 9
+00A00493//ADDI x9, x0, A
+00B00513//ADDI x10, x0, B
+00C00593//ADDI x11, x0, D
+00D00613//ADDI x12, x0, D
+00520433// add s8,s4,s5
+40340133// sub s2,s8,s3
+008364B3// or s9,t6,s8
+002473B3// and s7,s8,t2
+00000B13 //ADDI x22, x0, 0
+00000B93 //ADDI x23, x0, 0
+00000C13 //ADDI x24, x0, 0
+00000C93 //ADDI x25, x0, 0
+00000D13 //ADDI x26, x0, 0
+00000D93 //ADDI x27, x0, 0
+00000E13 //ADDI x28, x0, 0
+00000E93 //ADDI x29, x0, 0
+////*
+
+
+00200093//ADDI x1, x0, 2
+00300093//ADDI x2, x0, 3
+00400113//ADDI x3, x0, 4
+00000213 //ADDI x4, x0, 0
+00000293 //ADDI x5, x0, 0
+00000313 //ADDI x6, x0, 0
+00000393 //ADDI x7, x0, 0
+00000413 //ADDI x8, x0, 0
+00000493 //ADDI x9, x0, 0
+00000513 //ADDI x10, x0, 0
+00202023 //SW x2,0 (x0)
+00202223 //SW x2,4 (x0)
+00202423 //SW x2,8 (x0)
+00202623 //SW x2,12 (x0)
+00202823 //SW x2,16 (x0)
+00202A23 //SW x2,20 (x0)
+00202C23 //SW x2,24 (x0)
+00202E23 //SW x2,28 (x0)
+02202023 //SW x2,32 (x0)
+02202223 //SW x2,36 (x0)
+02202423 //SW x2,40 (x0)
+02202623 //SW x2,44 (x0)
+02202823 //SW x2,48 (x0)
+02202A23 //SW x2,52 (x0)
+02202C23 //SW x2,56 (x0)
+02202E23 //SW x2,60 (x0)
+00000B13 //ADDI x22, x0, 0
+00000B93 //ADDI x23, x0, 0
+00000C13 //ADDI x24, x0, 0
+00000C93 //ADDI x25, x0, 0
+00000D13 //ADDI x26, x0, 0
+00000D93 //ADDI x27, x0, 0
+00000E13 //ADDI x28, x0, 0
+00000E93 //ADDI x29, x0, 0
+0282A383 // LW s7,40(s5)
+0033F433// and s8,s7,t3
+00736133// or t2,s6,s7
+402381B3// sub s3,s7,s2
+00000B13 //ADDI x22, x0, 0
+00000B93 //ADDI x23, x0, 0
+00000C13 //ADDI x24, x0, 0
+00000C93 //ADDI x25, x0, 0
+00000D13 //ADDI x26, x0, 0
+00000D93 //ADDI x27, x0, 0
+00000E13 //ADDI x28, x0, 0
+00000E93 //ADDI x29, x0, 0
