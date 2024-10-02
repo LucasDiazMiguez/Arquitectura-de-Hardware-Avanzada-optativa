@@ -12,10 +12,14 @@ module riscv_pipelined_cycle (
   logic RegWrite;
   logic RegWrite_M;
   logic RegWrite_W;
+  logic ResultSrc_E0;
+  logic StallF;
+  logic StallD;
+  logic FlushE;
   logic [ 1:0] mux_rd1_E,mux_rd2_E;
   logic [1:0] ResultSrc, ImmSrc,ForwardAE,ForwardBE;
   logic [3:0] ALUControl;
-  logic [4:0] Rs2D,Rs1D,Rdm,RSD1_E,RSD2_E,RdM,RdW;
+  logic [4:0] Rs2D,Rs1D,Rdm,RSD1_E,RSD2_E,RdM,RdW,RdE;
   logic [31:0] Instr_D;
   
   controller c (
@@ -33,7 +37,8 @@ module riscv_pipelined_cycle (
       ImmSrc,
       PCSrc,
       RegWrite_M,
-      RegWrite_W
+      RegWrite_W,
+      ResultSrc_E0
   );
   datapath dp (
       clk,
@@ -53,19 +58,32 @@ module riscv_pipelined_cycle (
       Zero_E,
       RSD1_E,
       RSD2_E,
+      RdE,
       RdM,
       RdW,
       ForwardAE,
-      ForwardBE
-  );
+      ForwardBE,
+      StallF,
+      StallD,
+      FlushE
+      );
   hazard hz(
+      clk,
+      reset,
       RSD1_E,
       RSD2_E,
+      RdE,
       RdM,
       RdW,
       RegWrite_M,
       RegWrite_W,
       ForwardAE,
-      ForwardBE
+      ForwardBE,
+      ResultSrc_E0,
+      Instr_D[19:15],//RsD1
+      Instr_D[24:20],//RsD2
+      StallF,
+      StallD,
+      FlushE
   );
 endmodule

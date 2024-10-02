@@ -1,5 +1,6 @@
 module execute_phase (
     input logic clk,
+    input logic FlushE,
     input logic [31:0] RD1,
     input logic [31:0] RD2,
     input logic [31:0] PCD,
@@ -19,13 +20,24 @@ module execute_phase (
 );
 always_ff @(posedge clk)
     begin
-            RD1E<=RD1;
-            RD2E<=RD2;
-            RSD1_E<=Rs1D;
-            RSD2_E<=Rs2D;
-            PCE<=PCD;
-            RdE<=RdD;
-            ImmExt_E<=ImmExt_D;
-            PC_Plus4E<=PC_Plus4D;
+            if (FlushE) begin
+                RD1E<='0;
+                RD2E<='0;
+                RSD1_E<='0;
+                RSD2_E<='0;
+                PCE<='0;
+                RdE<='0;
+                ImmExt_E<='0;
+                PC_Plus4E<='0;
+            end else begin
+                RD1E<=RD1;
+                RD2E<=RD2;
+                RSD1_E<=Rs1D;
+                RSD2_E<=Rs2D;
+                PCE<=PCD;
+                RdE<=RdD;
+                ImmExt_E<=ImmExt_D;
+                PC_Plus4E<=PC_Plus4D;
+            end
         end                     
 endmodule

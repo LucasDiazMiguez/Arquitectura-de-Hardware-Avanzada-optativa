@@ -13,7 +13,8 @@ module controller (
     output logic [1:0] ImmSrc_D,
     output logic       PCSrcE,
     output logic       RegWrite_M,
-    output logic       RegWrite_W
+    output logic       RegWrite_W,
+    output logic       ResultSrc_E0
 );
   typedef enum logic [3:0] {
     decode_state,
@@ -24,19 +25,16 @@ module controller (
   statetype state, nextstate;
   logic [1:0] ALUOp;
   logic RegWrite_D, RegWrite_E;
-  logic [1:0] ResultSrc_D, ResultSrc_E, ResultSrc_M, ResultSrc_W;
+  logic [1:0] ResultSrc_D, ResultSrc_M, ResultSrc_W,ResultSrc_E;
   logic MemWrite_D, MemWrite_E, MemWrite_M;
   logic [3:0] ALUControl_D, ALUControl_E;
   logic Branch, Branch_D, Branch_E;
   logic Jump_D, Jump_E, Jump;
   logic ALUSrc_D, ALUSrc_E;
 
-  // always_ff @(posedge clk, posedge reset) begin
-  //   if (reset) state <= decode_state;
-  //   else state <= nextstate;
-  // end
   always_comb
   begin
+    ResultSrc_E0 = ResultSrc_E[0];
     ALUSrc = ALUSrc_E;
     MemWrite = MemWrite_M;
     ALUControl = ALUControl_E;
@@ -60,6 +58,7 @@ module controller (
   );
   execute_phase_Controller exe_phase (
       clk,
+         reset,
       RegWrite_D,
       ResultSrc_D,
       MemWrite_D,
@@ -77,6 +76,7 @@ module controller (
   );
   mem_phase_Controller mem_phase (
       clk,
+      reset,
       RegWrite_E,
       ResultSrc_E,
       MemWrite_E,
@@ -87,6 +87,7 @@ module controller (
 
   write_phase_Controller write_phase (
       clk,
+      reset,
       RegWrite_M,
       ResultSrc_M,
       RegWrite_W,

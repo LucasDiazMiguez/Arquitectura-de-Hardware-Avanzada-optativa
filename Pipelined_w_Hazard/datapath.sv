@@ -16,14 +16,17 @@ module datapath (
     output logic        Zero_E,
     output logic [4:0]  RSD1_E,
     output logic [4:0] RSD2_E,
+    output logic [4:0] RdE,
     output logic [4:0] RdM,
     output logic [4:0] RdW,
     input logic [1:0] ForwardAE,
-    input logic [1:0] ForwardBE
+    input logic [1:0] ForwardBE,
+    input logic StallF,
+    input logic StallD,
+    input logic FlushE
 );
   logic [31:0] PCFNext, PCPlus4, PCTarget,PCTargetE,PCD,PCE;
   logic [31:0] PCPlus4_F,PCPlus4_D, PCPlus4_E,PCPlus4_M,PCPlus4_W;
-  logic [4:0] RdE;
   logic [31:0] RD1,RD1E,RD2,RD2E,SRAE_MUX_RESULT,SRBE_MUX_RESULT;
   logic [31:0] ImmExt_D,ImmExt_E;
   logic [31:0] SrcA_E, SrcB,SrcB_E;
@@ -32,9 +35,10 @@ module datapath (
   logic [31:0] ReadDataW;
 
   // *------------------next PC logic FETCH Stage----------------
-  flopr #(32) pcreg (
+  flopenr #(32) pcreg (
       clk,
       reset,
+      (!StallF),
       PCFNext,
       PCF
   );
@@ -52,6 +56,7 @@ module datapath (
   // *------------------Decode phase----------------------------
   decode_phase dec_phase(
         clk,
+        (!StallD),
         Instr_F,PCF,PCPlus4_F,
         Instr_D,PCD,PCPlus4_D
   );
@@ -75,6 +80,7 @@ extend ext (
 // *------------------Execute phase----------------------------
 execute_phase exe_phase(
         clk,
+        FlushE,
         RD1,
         RD2,
         PCD,
