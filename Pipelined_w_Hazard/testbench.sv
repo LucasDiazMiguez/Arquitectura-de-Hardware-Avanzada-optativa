@@ -26,16 +26,16 @@ module testbench ();
   end
   // check results
   always @(negedge clk) begin
-    //  if (MemWrite) begin
-    //    $display("[LDM Debug] Tiempo: %t llegué", $realtime);
-    //    if (DataAdr === 100 & WriteData === 25) begin
-    //      $display("Simulation succeeded");
-    //      $stop;
-    //    end else if (DataAdr !== 96) begin
-    //      $display("Simulation failed");
-    //      $stop;
-    //    end
-    //  end
+     if (MemWrite) begin
+       $display("[LDM Debug] Tiempo: %t llegué", $realtime);
+       if (DataAdr === 100 & WriteData === 25) begin
+         $display("Simulation succeeded");
+         $stop;
+       end else if (DataAdr !== 96) begin
+         $display("Simulation failed");
+         $stop;
+       end
+     end
   end
   always @(negedge clk) begin
     if ($realtime > 15ns) begin
